@@ -179,7 +179,8 @@ if(checkcount<=0){
     passwordDisplay.value=" ";
     return;
 }
-    
+
+
 password="";
    let fun=[];
 
@@ -204,11 +205,12 @@ password="";
     
 
     let randomIndex=  getRndom(0,checkcount);
-
-    for(let i=0;i<passwordlength-(fun.length/2)-2;i++){
+        let k=password.length;
+    for(let i=0;i<(passwordlength-k);i++){
         password=password + fun[randomIndex]();
+      
     }
-
+    
 //To sufful password
 console.log(password);
 console.log(password[0]);
@@ -218,8 +220,10 @@ console.log(password);
  //To display  passsword in ui
  passwordDisplay.value=password;
  //if after check  all checkbox slider value set in less than  checbox ccount 
+ if(passwordlength<checkcount){
     passwordlength = password.length;
     handelslider();
+ }
 
 
  //To set strenght
