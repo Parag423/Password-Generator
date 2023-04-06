@@ -24,13 +24,13 @@
 .main-heading{
     color: #fff;
     font-size:140%;
-    text-shadow: 4px 4px 5px rgb(56, 33, 37);
+    text-shadow: .2rem .2rem .21rem rgb(56, 33, 37);
 }
 
 .main-second{
     padding: 10px;
     background-color: rgb(83, 69, 69);
-    border-radius: 5px;
+    border-radius: .4rem;
     display: flex;
     justify-content: space-between;
 }
@@ -39,6 +39,11 @@
     background-color: rgb(83, 69, 69);
     color: #fff;
     border: 0;
+    font-size: 1.5rem;
+}
+
+.password::placeholder{
+    font-size: 1.5rem;
 }
 
 
@@ -49,8 +54,8 @@
 }
 
 .copy img{
-    width: 27px;
-    height: 27px;
+    width: 1.7rem;
+    height: 1.7rem;
     background-color: rgb(83, 69, 69);
     border: 0;
     cursor: pointer;
@@ -58,12 +63,12 @@
 
 .copy span{ 
     position: absolute;
-    top:-25px;
-    left:-10px;
+    top:-1.5rem;
+    left:-.7rem;
     color: #fff;
     background-color: rgb(187, 117, 129);
-    border-radius: 16px;
-    padding: 3px; 
+    border-radius: 1rem;
+    padding: .2rem; 
     opacity: 0;
     transform: scale(0);
     transition: all 1s;
@@ -77,9 +82,9 @@
 
 
 .main-third{
-    padding: 10px;
+    padding: .6rem;
     background-color:rgb(83, 69, 69) ;
-    border-radius: 5px;
+    border-radius: .33rem;
     display: flex;
     flex-direction: column;
     gap:.5rem;
@@ -100,59 +105,59 @@
 
 label{
     color: #ddd2d2;
-    margin-left: 2px;
+    margin-left: .4rem;
 }
 
 .main-third-second{
-    padding: 0 20px;
+    padding: 0 1.3rem;
     position: relative;
 }
 
 .slider{
    appearance: none;/* Override default CSS styles */
     width: 100%;
-    height:8px;
+    height:.51rem;
     background: #8d8585;
     position: relative;
     background-image:linear-gradient(to right,  rgb(126, 67, 76), rgb(219, 177, 184)) ;
     background-repeat: no-repeat;
-    border-radius: 5px;
+    border-radius: .4rem;
     transition: all .05s ease-in;
 }
 
 .slider::before{
     position: absolute;
     content: "";
-    width:16px;
-    height: 10px;
+    width:1rem;
+    height: .7rem;
 
 }
 
 .slider:focus{
-    border: 2px solid rgb(221, 184, 191);
+    border: 0.2rem solid rgb(221, 184, 191);
     filter: drop-shadow(0px 0px 7px rgb(187, 117, 129));
 }
 
 .slider::-webkit-slider-thumb {
     appearance: none;
     background-color:rgb(187, 117, 129);
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: .6rem;
     z-index: 100;
     opacity: 1;
-    border: 2px solid rgb(187, 117, 129);
+    border: .4rem solid rgb(187, 117, 129);
     transition: all .5s;
   }
   .slider::-moz-range-thumb {
     appearance: none;
     background-color:rgb(187, 117, 129);
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: .7rem;
     z-index: 100;
     opacity: 1;
-    border: 2px solid rgb(187, 117, 129);
+    border: .4rem solid rgb(187, 117, 129);
     transition: all .5s;
   }
 
@@ -172,14 +177,14 @@ label{
 
 .strength{
     color:#ddd2d2;
-    font-size: 21px;
+    font-size: 1.3rem;
 }
 
 .indicator{
-    width: 15px;
-    height: 15px;
-    border-radius: 10px;
-    filter: blur(2px);
+    width: 1rem;
+    height: 1rem;
+    border-radius: .6rem;
+    filter: blur(.2rem);
     transition: all .5s;
 }
 
@@ -192,11 +197,11 @@ label{
 
 .main-third-last{
     background-color: rgb(187, 117, 129) ;
-    border-radius: 10px;
-    padding: 6px;
+    border-radius: .7rem;
+    padding: .33rem;
     text-align: center;
     color: #ddd2d2;
-    border-bottom: 3px solid #ddd2d2;
+    border-bottom: .5rem solid #ddd2d2;
     user-select: none;
     cursor: pointer;
 }
@@ -221,8 +226,8 @@ label{
 .message p{
     user-select: none;
     background-color:  rgb(187, 117, 129);
-    padding: 5px;
-    border-radius: 8px;
+    padding: .3rem;
+    border-radius: .5rem;
     color:#ddd2d2;
 }
 
@@ -251,10 +256,10 @@ transform: scale(1);
 .checkbox{
     appearance: none;
     background-color: rgb(83, 69, 69);
-    border: 2px solid  rgb(187, 117, 129);
-    width: 17px;
-    height: 17px;
-    border-radius: 5px;
+    border: .13rem solid  rgb(187, 117, 129);
+    width: 1rem;
+    height: 1rem;
+    border-radius: .3rem;
 
 }
 .checkbox:checked{
@@ -267,7 +272,18 @@ transform: scale(1);
     color: #ddd2d2;
     font-weight: 1000;
     position: absolute;
-    top:-30%;
-    left:10%;
+    top:-.2rem;
+    left:.1rem;
     bottom: 0; 
+}
+
+
+@media(max-width: 1100px){
+    html { font-size: 45px; }
+
+    .checkbox:checked::before{
+        font-size: .8rem;
+        top:-.25rem;
+    left:0;
+    }
 }
